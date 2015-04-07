@@ -1,0 +1,47 @@
+﻿//--TP Demo - Windows 7 SUT - Firefox - IE--\\
+//--Navigates to Testplant's website and fills out free trial form--\\
+
+put ("FireFox", "IE") into Browsers
+
+Put remotescreensize()/2 into ScreenCenter
+Set the nextKeyDelay to .05
+Set the keydownDelay to .2
+
+repeat with each Browser of Browsers
+	If Browser is "IE" then set the RemoteWorkInterval to 2
+	DoubleClick Browser
+	WaitFor 30.0, "Refresh"
+	Wait 1
+	If Browser is "IE" then Wait 2
+	Click "Address"
+	TypeText "testplant.com"
+	TypeText Return
+	WaitFor 30.0, "eggPlant"
+	If the number of items of everyimagelocation("eggPlant") is 2
+	then
+		Click item 2 of everyimagelocation("eggPlant")
+	else
+		Click "eggPlant"
+	end if
+	WaitFor 30.0, "Refresh"
+	Click "Trial"
+	WaitFor 30.0, "TrialPage"
+	MoveTo ScreenCenter
+	ScrollWheelDown 3
+	Click "FirstName"
+	TypeText ControlKey, "a" 
+	TypeText "Mary"
+	TypeText tab
+	TypeText "Jones"
+	TypeText tab
+	TypeText "mjones@swaganimals.com"
+	TypeText tab
+	TypeText tab
+	TypeText "Talented Animals Inc"
+	TypeText tab
+	TypeText "Lead Cat Herder"
+	MoveTo ScreenCenter
+	Click "Close"
+end repeat
+Log "Script is Complete!"
+
