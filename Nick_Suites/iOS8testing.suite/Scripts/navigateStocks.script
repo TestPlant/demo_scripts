@@ -1,0 +1,55 @@
+﻿// use homescreen button to launch BBC application
+WaitFor 10, "stocksApp"
+Tap "stocksApp"
+
+// pause and open assistive touch menu
+Wait 3
+DoubleClick (570, 870)
+
+// navigate to screen rotation buttons
+WaitFor 5, "atDevice"
+Tap "atDevice"
+
+WaitFor 5, "atRotateScreen"
+Tap "atRotateScreen"
+
+// try rotate right
+WaitFor 5, "atRotateRight"
+Tap "atRotateRight"
+
+// exit assistive touch
+Tap (1,1)
+Wait 3
+
+// validate success or failure of rotation
+If ImageFound("landscapeDJIA")
+	LogSuccess "Stocks rotate right (landscape) OK"
+else
+	LogError "Stocks rotate right (landscape) FAILED"
+End If
+
+// use assistive touch to resume portrait orientation
+Wait 3
+Tap (1070, 510)
+
+WaitFor 5, "atDevice"
+Tap "atDevice"
+
+WaitFor 5, "atRotateScreen"
+Tap "atRotateScreen"
+
+WaitFor 5, "atPortrait"
+Tap "atPortrait"
+
+Tap (1,1)
+Wait 3
+
+// validate success or failure of rotation
+If ImageFound("portraitDJIA")
+	LogSuccess "Stocks rotate right (portrait) OK"
+else
+	LogError "Stocks rotate right (portrait) FAILED"
+End If
+
+Wait 3
+LaunchApp SpringBoard

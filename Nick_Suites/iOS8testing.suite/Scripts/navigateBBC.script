@@ -1,0 +1,33 @@
+﻿// use homescreen button to launch BBC application
+WaitFor 20, "BBCshortcut"
+Tap "BBCshortcut"
+
+// navigate to the Technology news section
+If ImageFound(image: "sections", waitfor: 15)
+	Tap FoundImageLocation()
+End If
+
+WaitFor 20, "technologyMain"
+Wait 5
+Tap "technologyMain"
+WaitFor 10, "TLtechnologySection"
+
+// navigate to all Technology articles and Log first line of each title
+Repeat until ImageFound("endOfSection")
+	WaitFor 10, "TLtechnologySection"
+	Put ReadText( "TLtechnologySection", "BRtechnologySection") into title
+	Log "Line 1 of article" && counter() && "title:" && title
+	
+	SwipeLeft
+	Put counter() into global articleNumber
+End Repeat
+
+Add 1 to global articleNumber
+
+WaitFor 10, "TLtechnologySection"
+Put ReadText( "TLtechnologySection", "BRtechnologySection") into title
+Log "Line 1 of article" && global articleNumber && "title:" && title
+
+Wait 1
+// navigate back to Home
+LaunchApp SpringBoard

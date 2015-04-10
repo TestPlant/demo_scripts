@@ -1,0 +1,59 @@
+﻿// use LaunchApp command to navigate to developer signed application
+LaunchApp MySimpleApp
+
+// verify links on First View
+If ImageFound("showAlert") and if ImageFound("dismissKeyboard")
+	LogSuccess "Links on First View OK"
+else
+	LogError "Links on First View FAILED"
+End If
+
+// try Show Alert
+Tap (image:"showAlert")
+WaitFor 5, "alertHeader"
+
+// verify sub-header in alert
+If ImageFound(text: "This is an alert")
+	LogSuccess "Sub-header is OK"
+else
+	LogError "Sub-header FAILED"
+End If
+
+// pause and exit popup
+Wait 3
+Tap "alertB1"
+
+// enter MySimpleApp second view
+WaitFor 5, "secondViewShortcut"
+Tap FoundImageLocation()
+WaitFor 5, "simpleAppSV"
+
+// use OCR via ReadText to read text from the screen
+// store text in varText
+Put ReadText (("simpleAppTL", "simpleAppBR"), validCharacters: "a".."z"&&&"A".."Z"&&&"--"&&&".") into varText
+Put varText
+
+// verify first line of text against expected string value
+If varText contains "Loaded by the second view controller"
+	LogSuccess "First line of text OK"
+else
+	LogError "First line of text FAILED"
+End If
+
+// verify second line of text against expected string value
+If varText contains "an instance of SecondViewController"
+	LogSuccess "Second line of text OK"
+else
+	LogError "Second line of text FAILED"
+End If
+
+// verify third line of text against expected string value
+If varText contains "specified in the app delegate."
+	LogSuccess "Third line of text OK"
+else
+	LogError "Third line of text FAILED"
+End If
+
+Wait 3
+TypeText HomeKey
+

@@ -1,0 +1,19 @@
+﻿{
+    CaptureDate = "2014-10-10 12:26:30 +0000";
+    CaptureHost = "Nicholass-MacBook-Pro.local";
+    CaptureScreenSize =     (
+        640,
+        1136
+    );
+    HasAlpha = 1;
+    HonorAlpha = 1;
+    HotSpotX = "-63";
+    HotSpotY = 160;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 108;
+    OriginalLocationY = 324;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+}

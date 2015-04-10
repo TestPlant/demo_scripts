@@ -1,0 +1,18 @@
+﻿{
+    CaptureDate = "2014-11-26 18:25:35 +0000";
+    CaptureHost = "iOS 8 Gateway device";
+    CaptureScreenSize =     (
+        640,
+        1136
+    );
+    HasAlpha = 1;
+    HonorAlpha = 1;
+    HotSpotX = 43;
+    HotSpotY = 37;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 353;
+    OriginalLocationY = 72;
+    Pulsing = 0;
+    Scale = 1;
+}

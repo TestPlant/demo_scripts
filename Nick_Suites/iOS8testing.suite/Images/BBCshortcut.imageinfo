@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2014-06-16 20:13:28 +0000";
+    CaptureHost = iOS7;
+    CaptureScreenSize =     (
+        640,
+        1136
+    );
+    HasAlpha = 1;
+    HonorAlpha = 1;
+    HotSpotX = 38;
+    HotSpotY = 31;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 54;
+    OriginalLocationY = 429;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+}
