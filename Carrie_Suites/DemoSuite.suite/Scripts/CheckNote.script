@@ -1,0 +1,5 @@
+﻿Tap "myBookHeader"
+Waitfor 10, "myBookHeaderLarge"
+if imagefound (image:"Notes",waitfor:0) then tap foundimagelocation()
+WaitFor 10, "NotesContent"
+LogSuccess "the note was found in the Android app!"

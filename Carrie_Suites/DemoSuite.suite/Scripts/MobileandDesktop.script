@@ -1,0 +1,25 @@
+﻿params sut1,sut2,sut3
+
+//add a note on the desktop web app
+Connect sut1
+GeneralCommands.LaunchYP "Desktop"
+Click "Notes"
+Click (image:"AddaNote",waitfor:10)
+Click (image:"BusinessField",waitfor:5)
+TypeText "McDonald's"
+Click "McDonaldsAddress"
+Wait 1
+Click "AddNoteField"
+TypeText "good french fries"
+WaitFor 10, "AddConfirmed"
+Click "SaveButton"
+
+//check the note on the native iOS app
+Connect sut2
+GeneralCommands.LaunchYP "iPhone"
+CheckNote
+
+Connect sut3
+GeneralCommands.LaunchYP "Android"
+CheckNote
+

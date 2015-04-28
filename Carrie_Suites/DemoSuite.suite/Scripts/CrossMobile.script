@@ -1,0 +1,38 @@
+﻿put file "C:/Users/Carrie/Documents/Suite Accessories/listofitems.txt" into ListofItems
+
+Tap "AmazonStore"
+If foundimageinfo().imagepath contains "Android"
+then
+	Set the CollectionFilter to (name:"Android")
+	Set isAndroid to true
+else
+	Set the CollectionFilter to (name:"iOS")
+	Set isAndroid to false
+	set the nextkeydelay to .15
+end if
+
+Repeat for each line ItemName of ListofItems
+	Tap (imageName:"SearchIcon", waitFor:20)
+	WaitFor 20, "SpaceBar"
+	If imagefound(imageName:"ClearAppSearch",WaitFor:.5) then Tap foundimagelocation()
+	WaitFor 20, "SpaceBar"
+	Wait 2
+	TypeText ItemName
+	if isAndroid then 
+		TypeText Return
+	else
+		Wait 2
+		Tap "InitiateSearch"
+	end if
+	Tap (Image:"AppResults",WaitFor:30)
+	WaitFor 30, "ItemLoaded"
+	If imagefound(0,"ThreeStars") then 
+		log ItemName&&"has at least 3 stars." 
+	else 
+		logwarning ItemName&&"has fewer than 3 stars."
+	end if
+end repeat
+
+
+
+

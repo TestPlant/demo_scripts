@@ -1,0 +1,56 @@
+﻿put ("Firefox", "IE") into Browsers
+
+Put remotescreensize()/2 into ScreenCenter
+Set the nextKeyDelay to .03
+Set the keydowndelay to .1
+
+repeat with each Browser of Browsers
+	If Browser is "IE" then set the RemoteWorkInterval to 2
+	DoubleClick Browser
+	WaitFor 30.0, "Refresh"
+	wait 3
+	Click "Address"
+	TypeText "testplant.com"
+	TypeText Return
+	Wait 2
+	WaitFor 30.0, "eggPlant"
+	if Browser is "IE" then
+		Click "eggPlant"
+	else
+		Click item 2 of everyimagelocation("eggPlant")
+	end if
+	WaitFor 30.0, "Refresh"
+	Moveto (20,20)
+	Click "Trial"
+	WaitFor 30.0, "TrialPage"
+	MoveTo ScreenCenter
+	ScrollWheelDown 3
+	Click "FirstName"	
+	TypeText "Speedy"
+	TypeText tab
+	TypeText "Eggbert"
+	MoveTo ScreenCenter
+	ScrollWheelDown 4
+	WaitFor 4, "Country"
+	Click "Country"
+	WaitFor 5, "DropDownShown"
+	Put imagelocation(image:"CDropLR",waitfor:1) into myLoc
+	If Browser is "IE" then 
+		Set myAdjustedLoc to (myLoc + (0,20))
+	else
+		Set myAdjustedLoc to myLoc
+	end if
+	set the SearchRectangle to (item 2 of everyimagelocation("CDropLU"),myAdjustedLoc)
+	Set the ScriptLogging to "no"
+	repeat until imagefound(image:"Bolivia",waitfor:0)
+		Set the remoteworkinterval to .1
+		Repeat 4 times
+			Click myLoc
+		end repeat
+	end repeat
+	Set the remoteworkinterval to .2
+	Set the ScriptLogging to "yes"
+	Click "Bolivia"
+	Set the SearchRectangle to ()
+	Click "Close"
+end repeat

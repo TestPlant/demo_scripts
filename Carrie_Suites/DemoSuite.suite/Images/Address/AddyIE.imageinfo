@@ -1,0 +1,19 @@
+{
+    CaptureDate = <*D2013-09-26 16:36:56 +0000>;
+    CaptureHost = "Windows 7";
+    CaptureScreenSize = (
+	<*I950>,
+	<*I623>
+    );
+    HasAlpha = <*BN>;
+    HonorAlpha = <*BY>;
+    HotSpotX = <*R150>;
+    HotSpotY = <*R8>;
+    ImageDescription = <>;
+    LastKnownLocationX = <*I0>;
+    LastKnownLocationY = <*I0>;
+    OriginalLocationX = <*I11>;
+    OriginalLocationY = <*I30>;
+    Pulsing = <*BN>;
+    Scale = <*R1>;
+}

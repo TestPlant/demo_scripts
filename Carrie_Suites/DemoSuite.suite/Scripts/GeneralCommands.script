@@ -1,0 +1,18 @@
+﻿to launchYP SUT
+	if SUT is "Desktop" then
+		DoubleClick "Chrome"
+		WaitFor 10, "Refresh"
+		TypeText "yp.com",Return
+		WaitFor 20, "YPLogo"
+	else if SUT is "Android" then
+		Tap "YPLogo"
+		WaitFor 10, (image:"YPLogo/YPLogo_Desktop",scale: 1.8)
+	else if SUT is "iPhone" then
+		Tap (image:"YPLogo/YPLogo_Android",scale:.85)
+		WaitFor 10, "MyBookHeader"
+	end if
+end launchYP
+
+
+
+

@@ -1,0 +1,36 @@
+﻿put file "C:\Users\Carrie\My Documents\Suite Accessories\numbers.txt" into math
+
+LaunchWindowsApp "wordpad", "CalcReadLR"
+LaunchWindowsApp "calculator", "Edit"
+
+Repeat with each line myline of math
+	typetext item 1 of myline
+	typetext keypadPlus
+	typetext item 2 of myline
+	typetext Return
+	Click "edit"
+	Click "copy"
+	Click "Clear"
+	Click "WPBottom"
+	TypeText ControlKey, "v"
+	TypeText Return
+	Click "CalcBottom"
+	WaitFor 8, "edit"
+end Repeat
+Click "WPBottom"
+
+Click "Close"
+Click "Dismiss"
+Wait 1
+Click "Close"
+
+to LaunchWindowsApp AppName, AppIndicator
+	Click "StartButton"
+	Click "RunLine"
+	Typetext AppName
+	Typetext Return
+	WaitFor 8.0, AppIndicator
+end LaunchWindowsApp
+
+
+
