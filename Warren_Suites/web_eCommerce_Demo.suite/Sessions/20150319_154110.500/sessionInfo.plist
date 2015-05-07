@@ -1,0 +1,17 @@
+{
+    commandList = "[{captureRect:[314, 360, 353, 385], command:@\"Click\", eventNum:2, hotSpot:[3.3009402499999999e+002, 6.4384356700000001e+002], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"AndroidChromeIcon\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150319_154110.500/Screen0002.png\"}, {captureRect:[42, 534, 234, 563], command:@\"Click\", eventNum:4, hotSpot:[5.4169277000000001e+001, 4.5801116900000000e+002], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"URLBar\", searchType:@\"Text\", waitFor:@\"\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150319_154110.500/Screen0004.png\"}, {command:@\"TypeText\", eventNum:6, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150319_154110.500/Screen0006.png\", text:@\"\\\"google\\\",Return\"}]";
+    generatedCommands = (
+	"Click \"AndroidChromeIcon\"",
+	"Click \"URLBar\"",
+	"TypeText \"google\",Return"
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "AndroidChromeIcon.png",
+	    "URLBar.png",
+	    "AndroidChromeIcon.png",
+	    "URLBar.png"
+	);
+    };
+    unnamedImageCount = <*I0>;
+}

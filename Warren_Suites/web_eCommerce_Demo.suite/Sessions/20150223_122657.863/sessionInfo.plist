@@ -1,0 +1,29 @@
+{
+    commandList = "[{captureRect:[27, 435, 49, 464], command:@\"DoubleClick\", eventNum:2, hotSpot:[4.0457146000000002e+001, 1.3471047999999999e+002], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"ChromeDesktopIcon\", searchType:@\"Tolerant\", waitFor:@\"30\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0002.png\"}, {command:@\"TypeText\", eventNum:6, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0006.png\", text:@\"\\\"www.ally.com\\\",Return\"}, {captureRect:[605, 491, 644, 504], command:@\"Click\", eventNum:32, hotSpot:[6.3532702600000005e+002, 8.5985412999999994e+001], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"AllySiteSearch\", searchType:@\"Text\", waitFor:@\"30\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0032.png\"}, {command:@\"KeyDown\", eventNum:34, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0034.png\", skipStep:@\"YES\", text:@\"\\\"d\\\"\"}, {command:@\"KeyUp\", eventNum:35, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0034.png\", skipStep:@\"YES\", text:@\"\\\"d\\\"\"}, {command:@\"TypeText\", eventNum:36, origText:@\"\\\"eposit\\\"\", screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0034.png\", text:@\"\\\"deposit\\\"\"}, {captureRect:[605, 461, 706, 475], command:@\"RightClick\", eventNum:48, hotSpot:[6.6979046600000004e+002, 1.6193917800000000e+002], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"TopResults\", searchType:@\"Text\", waitFor:@\"25\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0048.png\"}, {captureRect:[695, 403, 806, 419], command:@\"Click\", eventNum:51, hotSpot:[7.3122540300000003e+002, 1.7627008100000000e+002], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"Openlinkinnewtab\", searchType:@\"Text\", waitFor:@\"10\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0051.png\"}, {captureRect:[880, 572, 944, 589], command:@\"Click\", eventNum:53, hotSpot:[9.1553015100000005e+002, 1.4331050000000001e+000], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"CloseBrowser\", searchType:@\"Tolerant\", waitFor:@\"30\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150223_122657.863/Screen0053.png\"}]";
+    generatedCommands = (
+	"DoubleClick (Image:\"ChromeDesktopIcon\", WaitFor:30)",
+	"TypeText \"www.ally.com\",Return",
+	"Click (Image:\"AllySiteSearch\", WaitFor:30)",
+	"-skipped- KeyDown \"d\"",
+	"-skipped- KeyUp \"d\"",
+	"TypeText \"deposit\"",
+	"RightClick (Image:\"TopResults\", WaitFor:25)",
+	"Click (Image:\"Openlinkinnewtab\", WaitFor:10)",
+	"Click (Image:\"CloseBrowser\", WaitFor:30)"
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "ChromeDesktopIcon.png",
+	    "AllySiteSearch.png",
+	    "TopResults.png",
+	    "Openlinkinnewtab.png",
+	    "CloseBrowser.png",
+	    "ChromeDesktopIcon.png",
+	    "AllySiteSearch.png",
+	    "TopResults.png",
+	    "Openlinkinnewtab.png",
+	    "CloseBrowser.png"
+	);
+    };
+    unnamedImageCount = <*I0>;
+}

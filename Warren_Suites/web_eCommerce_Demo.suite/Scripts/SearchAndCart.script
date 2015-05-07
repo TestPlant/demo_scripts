@@ -1,0 +1,40 @@
+﻿Global SearchItems
+
+Waitfor 20, Image:"LogoutButton"
+Click (Image:"Searchstore", WaitFor:18)
+TypeText (any item of SearchItems), return
+Wait 1
+Click (Image:"FirstItemLocation", WaitFor:18)
+if ImageFound(Text:"Availability: in stock") 
+then 
+	logsuccess "item found"
+Else 
+	logerror "No available items."
+end if
+
+Repeat 20 times 
+	if ImageFound(Image:"AddToCartButton", WaitFor:4)
+	then
+		Click FoundImageLocation()
+		exit repeat
+	else
+		TypeText downArrow repeated 5 times
+	end if
+end repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

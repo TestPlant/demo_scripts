@@ -1,0 +1,10 @@
+﻿repeat with CaseNumber equal to each item of files of "C:\Temp\Tests\" 
+	BeginTestCase CaseNumber
+	repeat with each line of file CaseNumber//Repeat Loop that opens a data file, then runs a function based on the first column of data, passing in parameters based on the other columns. 
+		put the first item of it into FunctionName //This is a new It that is being set by the innermost repeat loop.
+		put it split by comma into FunctionParams
+		delete the first item of FunctionParams
+		put Functions.(FunctionName)(FunctionParams)
+	end repeat
+	EndTestCase CaseNumber
+end repeat
