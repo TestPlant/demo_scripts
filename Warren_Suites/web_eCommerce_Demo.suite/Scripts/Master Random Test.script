@@ -1,0 +1,31 @@
+﻿global SiteAddress
+global UserList
+global SearchItems
+global CurrentUser
+
+put "http://10.1.10.91:17100" into SiteAddress
+Connect "LocalVM"
+if RunningFromCommandLine() is false then
+	run SuperSlower 
+end if
+Run DataLoading
+repeat 10 times
+	try
+		put any item of UserList into CurrentUser
+		runwithnewresults UserLogin
+		runwithnewresults SearchAndCart
+		runwithnewresults BuyItem
+		run Cleanup
+	catch 
+		run Cleanup
+	end try
+	
+end repeat
+
+
+
+
+
+
+
+

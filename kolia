@@ -1,0 +1,12 @@
+if global browsers="chrome" then
+	typetext "www.testplant.com"
+	typetext return
+	typetext altkey,f4
+	
+else
+	if global browsers="IE" then
+		DoubleClick "navbar"
+		typetext "www.testplant.com"
+		typetext return
+	end if
+end if

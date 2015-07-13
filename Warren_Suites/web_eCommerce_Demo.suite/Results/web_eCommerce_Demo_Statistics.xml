@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"?>
+<statistics>
+ <script name="DataLoading">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>166</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2014-12-12 10:34:45 -0700</FirstRun>
+  <LastRun>2015-03-30 15:05:53 -0600</LastRun>
+  <TotalTimeOnSuccess>24.551000</TotalTimeOnSuccess>
+ </script>
+ <script name="BuyItem">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>155</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2014-12-11 09:08:55 -0700</FirstRun>
+  <LastRun>2015-05-06 10:37:10 -0600</LastRun>
+  <TotalTimeOnSuccess>7791.844000</TotalTimeOnSuccess>
+ </script>
+ <script name="SearchAndCart">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>171</NumberOfRuns>
+  <NumberOfFails>29</NumberOfFails>
+  <FirstRun>2014-12-11 09:08:49 -0700</FirstRun>
+  <LastRun>2015-05-06 10:36:51 -0600</LastRun>
+  <TotalTimeOnSuccess>2359.160000</TotalTimeOnSuccess>
+ </script>
+ <script name="UserLogin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>190</NumberOfRuns>
+  <NumberOfFails>10</NumberOfFails>
+  <FirstRun>2014-12-11 09:08:34 -0700</FirstRun>
+  <LastRun>2015-05-06 10:36:22 -0600</LastRun>
+  <TotalTimeOnSuccess>4246.800000</TotalTimeOnSuccess>
+ </script>
+ <script name="Master Data Driven Function">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>28</NumberOfRuns>
+  <NumberOfFails>4</NumberOfFails>
+  <FirstRun>2015-03-31 11:56:33 -0600</FirstRun>
+  <LastRun>2015-03-31 14:52:51 -0600</LastRun>
+  <TotalTimeOnSuccess>111.197000</TotalTimeOnSuccess>
+ </script>
+ <script name="Master User Smoke">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2015-03-30 16:22:10 -0600</FirstRun>
+  <LastRun>2015-03-30 16:22:10 -0600</LastRun>
+  <TotalTimeOnSuccess>2899.494000</TotalTimeOnSuccess>
+ </script>
+ <script name="Master Random Test">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>30</NumberOfRuns>
+  <NumberOfFails>7</NumberOfFails>
+  <FirstRun>2014-12-11 09:08:34 -0700</FirstRun>
+  <LastRun>2015-03-31 11:40:55 -0600</LastRun>
+  <TotalTimeOnSuccess>8578.482000</TotalTimeOnSuccess>
+ </script>
+</statistics>

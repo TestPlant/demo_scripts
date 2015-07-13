@@ -1,0 +1,35 @@
+﻿(************GUI VALIDATIONS*************)
+//When information is needed about the state of the SUT, a GUI validation is used. These validations can be written as hard or soft error validations. 
+
+// Method (1): Hard validation. Fail the script if validation fails
+//This particular search will watch the remote screen buffer for 8 seconds seeing if an OCR match to the string "TargetString" can be made. If it can't, then the script will end, and unless you have a Try Catch set your test execution will end as well. 
+waitfor 8, text: "TargetString"
+
+//As with the Click command, both Text and Image parameters can be used for WaitFor
+waitfor 10, image:"TargetImage"
+
+//Since Waitfor can't accept an inline SearchRectangle parameter, if you need to set one for that search you will need to use the global property
+set the searchRectangle to ("TLImage","BRImage")
+
+//If you do so, then after your Waitfor you will need to reset the searchRectangle to default with this command:
+set the searchRectangle to ()
+
+// Method (2): Soft Failure. Continue script even if validation fails
+//This process will make use of ImageFound and FoundImageLocation.
+
+//ImageFound() is a function that returns a boolean True|False so it can be used as an input for If/Then statements. There is an assumed "is True" in the If query, so if you are evaluating to True there is no need to specify it. 
+
+If ImageFound(text: "TargetText", contrast: on, WaitFor: 8) 
+	LogSuccess "OK"
+else
+	LogWarning "FAIL"
+End If
+
+// after target text is found, interact with target UI element
+// foundimagelocation() returns the location of the previous search
+Click FoundImageLocation()
+
+// restore the searchRectangle global property to default
+Set the SearchRectangle to ()
+
+

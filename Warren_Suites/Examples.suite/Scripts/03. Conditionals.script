@@ -1,0 +1,57 @@
+﻿(************CONDITIONALS and VALIDATIONS*************)
+// If is the only conditional evaluation that SenseTalk uses.
+
+//Standard If/Then
+If the time is greater than loggedTime 
+then 
+	log "Curren Time is greater than " & loggedTime
+end if
+
+//The conditional chain can be extended by using the Else and Else If evaluations. 
+If the time is greater than loggedTime
+then
+	log "Current Time is greater than" &&loggedTime
+else if the time is less than loggedTime
+	log "Current Time is less than " & loggedTime
+else
+	log "Current Time is " &loggedTime
+end if
+
+//Since ImageFound() is a function that returns a Boolean, it can be used as a condition for If
+If ImageFound(Text:"ImageName") 
+	Log "Expected field found"
+else
+	Log "Expected not found"
+end if
+
+// short circuit syntax
+// here is an example using "or if", which short circuits the evaluation of the antecedent
+// if "value1" IS in variable, eggPlant won't check whether "value2" is in variable
+Put "value1 value2" into variable
+
+If "value1" is in variable or if "value2" is in variable
+	LogSuccess "variable has correct contents"
+else
+	LogError "variable doesn't have correct contents"
+End If
+
+// here is an example using "and if", which short circuits the evaluation of the antecedent
+// if "value1" is NOT in variable, eggPlant won't check whether "value2" is in variable
+Put "value1 value2" into variable
+
+If "value1" is in variable and if "value2" is in variable
+	LogSuccess "variable has correct contents"
+else
+	LogError "variable doesn't have correct contents"
+End If
+
+// you can also use this strategy when making validations against images
+// if image1 isn't found, eggPlant won't look for image 2
+If ImageFound("image1") and if ImageFound("image2")
+	// do work
+End If
+
+// if image1 is found, eggPlant won't look for image 2
+If ImageFound("image1") or if ImageFound("image2")
+	// do work
+End If

@@ -1,0 +1,72 @@
+﻿(************IMAGE and TEXT SEARCHES*************)
+//Functions like Click operate based on coordinate pairs. Sometimes you can use a hard coded coordinate pair, such as (185,300) but normally you will want to get your coordinates as the return from an image search or a text search. 
+
+// standard image search
+Click "nameOfImage"
+
+// image search with added parameters
+DoubleClick (image: "nameOfImage", scale: 0.25, searchRectangle: ("TLImage", "BRImage"), WaitFor: 25)
+//A full list of valid parameters for image searches can be found at http://docs.testplant.com/?q=content/appendix-e-property-lists#image-properties
+
+// standard text search with OCR
+Click (text: "stringOfText")
+
+//variable text search with OCR:
+DoubleClick (text:stringContainingVariable)
+
+// text search with added parameters
+Click (text: "stringOfText", searchRectangle: ("TLImage", "BRImage"), WaitFor: 25)
+// A full list of valid parameters for text searches can be found in the Text Properties section of http://docs.testplant.com/?q=content/appendix-e-property-lists
+
+
+###############Special Note on OCR and Search Rectangle#################
+// when searching for text with the OCR, set the searchRectangle global property or declare searchRectangle inline to limit the area that eggPlant searches for text. For OCR, setting a search rectangle will *dramatically* improve both the reliability and speed of the search. 
+
+// http://docs.testplant.com/?q=content/dynamic-search-rectangles
+// set the SearchRectangle global property with images
+
+// In the same way that the HotSpot location from an image search can be used to provide a coordinate location for the Click command, eggPlant can find two images and use their HotSpot coordinates to set a SearchRectangle.
+// you can use the same image and move the hotspot to create TLimage and BRimage
+Set the SearchRectangle to ("TLimage", "BRimage")
+
+
+(************READING TEXT*************)
+// two approaches: (1) use RemoteClipboard() function; (2) use OCR to read text
+
+// to use RemoteClipboard(): highlight text on SUT, copy text, put return of RemoteClipboard into variable
+
+Click "fieldOfText"
+TypeText ControlKey, "a" //select all text
+TypeText ControlKey, "c" //copy text to the clipboard
+Put RemoteClipboard() into varText
+
+// if target text cannot be copied, leverage the OCR to read text with the ReadText() function
+// pass ReadText() either images or hard-coordinates or both
+
+// hotspot location of each image is used
+// first image hotspot is used as the top-left of the rectangle
+// second image hotspot is used as the bottom-right of the 
+Put ReadText ("TLImage", "BRImage") into varText
+
+// use images with offset from the HotSpot location
+Put ReadText(imageLocation("TLImage")+(20,20), imageLocation("BRImage")+(40,40)) into varText
+
+// example of using the ValidPattern parameter
+// "2DRy" is an example of an acceptable return
+Put ReadText(("TLImage","BRImage"), validPattern: "[0-9][A-Z][P|R][a-z]")
+
+// example of using the ValidCharacters parameter
+// acceptable return only contains lowercase letters
+Put ReadText(("image", "image"), validCharacters: "a".."z")
+
+(************TYPETEXT*************)
+
+// note: TypeText commands enter case-sensitive text
+Click "textField"
+
+//standard TypeText
+Typetext "yes", return
+// Special keys for the TypeText command can be found at http://docs.testplant.com/?q=content/appendix-c-typetext-keywords
+
+//variable TypeText
+TypeText stringContainingVariable

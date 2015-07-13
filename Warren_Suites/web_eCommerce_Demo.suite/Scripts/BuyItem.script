@@ -1,0 +1,29 @@
+﻿Repeat 10 times
+	if ImageFound(Image:"ShoppingCartButton", WaitFor:4)
+	then
+		Click FoundImageLocation()
+		exit repeat
+	else
+		TypeText pageUp 
+	end if
+end repeat
+
+Repeat Until ImageFound(Image:"CheckoutButton", WaitFor:1)
+	ScrollWheelDown(3)
+	if the repeatIndex is more than 500
+	then exit repeat
+end repeat
+
+Click (Image:"TOSAgreement", WaitFor:18)
+Click (Image:"CheckoutButton", WaitFor: 18)
+Repeat until ImageFound(Image:"Step6Active", WaitFor:4)
+	Repeat Until ImageFound(Image:"ContinueButton", WaitFor:1)
+		ScrollWheelDown(3)
+	end repeat
+	Click (Image:"ContinueButton",  WaitFor: 30)
+end repeat
+
+Repeat until ImageFound(Image:"ConfirmOrderButton", WaitFor:1)
+	ScrollWheelDown(3)
+end  repeat
+click FoundImageLocation()

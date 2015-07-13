@@ -1,0 +1,20 @@
+{
+    commandList = "[{captureRect:[104, 602, 125, 623], command:@\"DoubleClick\", eventNum:2, hotSpot:[1.2159999800000000e+002, 3.2115479000000001e+001], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"ChomeDesktopIcon_2\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0002.png\"}, {captureRect:[96, 593, 117, 610], command:@\"Click\", eventNum:6, hotSpot:[1.2960000600000001e+002, 4.5637756000000003e+001], imageName:@\"\", infoDict:{folderPath:@\"/\", imageName:@\"image0005\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0006.png\"}, {command:@\"TypeText\", eventNum:8, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0008.png\", text:@\"\\\"apple.com\\\",Return\"}, {command:@\"KeyUp\", eventNum:30, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0026.png\", skipStep:@\"YES\", text:@\"OptionKey\"}, {command:@\"KeyDown\", eventNum:31, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0026.png\", skipStep:@\"YES\", text:@\"OptionKey\"}, {command:@\"KeyUp\", eventNum:32, screenShotFile:@\"C:/Users/Warren/Documents/ePF Scripts/web_eCommerce_Demo.suite/Sessions/20150312_153800.050/Screen0026.png\", skipStep:@\"YES\", text:@\"OptionKey\"}]";
+    generatedCommands = (
+	"DoubleClick \"ChomeDesktopIcon_2\"",
+	"Click \"image0005\"",
+	"TypeText \"apple.com\",Return",
+	"-skipped- KeyUp OptionKey",
+	"-skipped- KeyDown OptionKey",
+	"-skipped- KeyUp OptionKey"
+    );
+    locallyAddedFiles = {
+	"" = (
+	    "ChomeDesktopIcon_2.png",
+	    "image0005.png",
+	    "ChomeDesktopIcon_2.png",
+	    "image0005.png"
+	);
+    };
+    unnamedImageCount = <*I0>;
+}

@@ -1,0 +1,15 @@
+﻿function RemoveCharacter inPutList
+	put the first item of inputList into inputString
+	put the second item of inputList into inputChar
+	delete every inputChar from inputString
+	return inputString
+end function
+
+
+Function DataLoader Path
+	repeat with each line of file (Path)
+		insert item 1 of it into Data
+	end repeat
+	put Data
+	return (Data)	
+end function

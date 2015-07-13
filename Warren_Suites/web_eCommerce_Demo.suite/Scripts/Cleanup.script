@@ -1,0 +1,8 @@
+﻿If Imagefound (Image:"LogoutButton", WaitFor:6)
+then 
+	click foundimagelocation()
+else 
+	TypeText PageUp Repeated 10 times
+	Click (Image:"LogoutButton")
+end if
+Click (Image:"CloseChromeButton", WaitFor:18)
